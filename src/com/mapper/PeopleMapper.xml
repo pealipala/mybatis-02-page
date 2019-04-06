@@ -3,9 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mapper.PeopleMapper">
+    <!--分页查询-->
     <select id="selAll" resultType="people" parameterType="map">
         select * from t_user limit #{pageStart},#{pageSize}
     </select>
+    <!--查询数量-->
     <select id="selCount" resultType="long">
         select count(*) from t_user
     </select>
