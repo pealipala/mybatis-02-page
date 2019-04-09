@@ -37,6 +37,7 @@ public class Page extends HttpServlet {
         PageInfo pageInfo = peopleService.show(pageSize,pageNumber);
         req.setAttribute("pageInfo",pageInfo);
         req.getRequestDispatcher("/index.jsp").forward(req,resp);
+        return;
     }
 
 
